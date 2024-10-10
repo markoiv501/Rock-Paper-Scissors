@@ -1,0 +1,187 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  height: 100vh;
+  font-weight: 600;
+  position: relative;
+
+  color: #f1f3f5;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.backimage {
+  background-image: url("photo/background.png");
+}
+
+.backimage-finish {
+  background-image: url("photo/background-finish.png");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.main-container {
+  padding: 50px;
+  color: yellow;
+}
+
+.container {
+  display: flex;
+}
+.container-play {
+  justify-content: center;
+}
+
+.scores {
+  justify-content: space-around;
+  margin-left: -52px;
+  margin-top: 50px;
+}
+
+.hands {
+  justify-content: space-between;
+  padding: 30px 70px 0px 70px;
+}
+
+.user--hand {
+  height: 280px;
+}
+
+.vs {
+  font-size: 100px;
+
+  font-weight: 700;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.computer--hand {
+  height: 270px;
+  margin-left: -100px;
+}
+
+.text {
+  justify-content: center;
+  margin-top: 70px;
+  font-weight: 300;
+}
+
+.position-text {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.position-buttons {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 450px;
+}
+
+.score {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.score--computer {
+  margin-left: 90px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 12px;
+  transition: background-color 0.4s;
+}
+
+.btn--play-again {
+  margin-top: 50px;
+  /* background-color: #761083; */
+  background-color: #f1f3f5;
+  color: #338093;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn--play {
+  font-weight: 600;
+
+  background-color: #f1f3f5;
+  color: #761083;
+  margin: 0 25px 0 25px;
+}
+
+.rock {
+  padding: 0 45px;
+}
+
+.paper {
+  padding: 0 40px;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.won {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 50px;
+  font-style: italic;
+}
+
+.lost {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 50px;
+  font-style: italic;
+}
+
+.user--hand,
+.computer--hand {
+  /* opacity: 0; Početno stanje ruku */
+  transform: translateY(-20px); /* Polazna pozicija */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Tranzicija */
+}
+
+.user--hand.show,
+.computer--hand.show {
+  opacity: 1; /* Kada se ruke prikažu, postavi ih da budu vidljive */
+  transform: translateY(0); /* Vratite ih na normalnu poziciju */
+}

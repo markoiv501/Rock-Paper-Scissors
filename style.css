@@ -1,0 +1,43 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  color: #f1f3f5;
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: bordre-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.before {
+  height: 300px;
+  margin-top: 180px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 50px;
+  background-color: #761083;
+  color: #f1f3f5;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 12px;
+  transition: background-color 0.4s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Blaga senka ispod dugmeta */
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
